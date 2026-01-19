@@ -1,0 +1,264 @@
+/* ======================
+   NAVBAR
+====================== */
+
+.navbar-wrapper {
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  padding: 20px 80px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  border-bottom: 1px solid rgba(0, 255, 136, 0.25);
+  box-shadow:
+    0 0 20px rgba(0,255,136,0.15),
+    inset 0 0 30px rgba(0,255,136,0.05);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-circle {
+  background: #00ff88;
+  color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text span {
+  font-weight: bold;
+  display: block;
+}
+
+.logo-text small {
+  color: #00ff88;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* MENU CONTAINER */
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+
+  background: rgba(20,20,20,0.65);
+  backdrop-filter: blur(10px);
+
+  padding: 8px 18px;
+  border-radius: 30px;
+
+  border: 1px solid rgba(0,255,136,0.25);
+  box-shadow: 0 0 18px rgba(0,255,136,0.15);
+}
+
+/* MENU ITEM */
+
+.nav-item {
+  position: relative;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+/* Glow trail */
+.nav-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0,255,136,0.7),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.nav-item:hover::before {
+  left: 120%;
+}
+
+/* Hover */
+
+.nav-item:hover {
+  color: #00ff99;
+  text-shadow: 0 0 8px rgba(0,255,153,0.7);
+}
+
+/* Active */
+
+.nav-item.active {
+  background: rgba(0,255,136,0.15);
+  color: #00ff88;
+
+  box-shadow:
+    0 0 10px rgba(0,255,136,0.6),
+    0 0 20px rgba(0,255,136,0.5),
+    0 0 35px rgba(0,255,136,0.4),
+    inset 0 0 12px rgba(0,255,136,0.4);
+
+  border: 1px solid rgba(0,255,136,0.6);
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+/* Active glow pulse */
+
+@keyframes glowPulse {
+  0% {
+    box-shadow:
+      0 0 10px rgba(0,255,136,0.6),
+      0 0 20px rgba(0,255,136,0.5),
+      0 0 35px rgba(0,255,136,0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 14px rgba(0,255,136,0.9),
+      0 0 28px rgba(0,255,136,0.8),
+      0 0 45px rgba(0,255,136,0.7);
+  }
+  100% {
+    box-shadow:
+      0 0 10px rgba(0,255,136,0.6),
+      0 0 20px rgba(0,255,136,0.5),
+      0 0 35px rgba(0,255,136,0.4);
+  }
+}
+
+/* ICON BOUNCE */
+
+.nav-item:hover .icon {
+  animation: bounce 0.4s ease;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* CTA BUTTON */
+
+.talk-btn {
+  background: rgba(0,255,136,0.85);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  box-shadow: 0 0 18px rgba(0,255,136,0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+/* CTA Shine */
+
+.nav-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: 0.5s;
+}
+
+.nav-cta:hover::before {
+  left: 100%;
+}
+
+/* Glow line */
+
+.nav-glow-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #00ff88, transparent);
+  margin-top: 18px;
+}
+
+/* MOBILE */
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 26px;
+  color: #00ff88;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #0b0b0b;
+  padding: 20px;
+  gap: 15px;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .talk-btn {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
+.nav-item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.mobile-menu a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}

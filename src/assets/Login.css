@@ -1,0 +1,92 @@
+/* ======================
+   ADMIN LOGIN PAGE
+====================== */
+
+.admin-login {
+  width: 400px;
+  margin: 120px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #1f1f1f;
+  box-shadow: 0 0 25px rgba(0,255,136,0.15);
+}
+
+.admin-login h2 {
+  color: #00ff88;
+  margin-bottom: 25px;
+}
+
+.admin-login input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #1f1f1f;
+  background: #0b0b0b;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.admin-login input:focus {
+  border-color: #00ff88;
+  box-shadow: 0 0 10px rgba(0,255,136,0.4);
+}
+
+.admin-login button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg,#00ff88,#00cc70);
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.admin-login button:hover {
+  box-shadow: 0 0 25px #00ff88;
+  transform: translateY(-2px);
+}
+
+.error {
+  color: #ff4d4d;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 768px) {
+  .admin-login {
+    width: 80%;
+    max-width: 360px;
+    margin: 80px auto;
+    padding: 25px 20px;
+  }
+
+  .admin-login h2 {
+    font-size: 22px;
+  }
+
+  .admin-login input {
+    font-size: 14px;
+  }
+
+  .admin-login button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-login {
+    max-width: 100%;
+    margin: 60px 12px;
+  }
+}
