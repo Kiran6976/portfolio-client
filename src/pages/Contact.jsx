@@ -1,7 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../services/api";   // 👈 adjust path if needed
 import "../assets/Contact.css";
-
 
 export default function Contact() {
 
@@ -20,10 +19,11 @@ export default function Contact() {
     e.preventDefault();
 
     try{
-      await axios.post("http://localhost:5000/api/contact", form);
+      await api.post("/contact", form);
       alert("Message sent successfully!");
       setForm({name:"",email:"",subject:"",message:""});
     }catch(err){
+      console.error(err);
       alert("Failed to send message");
     }
   };
@@ -73,4 +73,3 @@ export default function Contact() {
     </div>
   );
 }
-

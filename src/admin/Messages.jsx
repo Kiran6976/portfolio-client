@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api"; 
 import "../assets/Admin.css";
 
 
@@ -15,8 +15,8 @@ export default function Messages(){
     try {
       const token = localStorage.getItem("adminToken");
 
-      const res = await axios.get(
-        "http://localhost:5000/api/admin/messages",
+      const res = await api.get(
+        "/admin/messages",
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -30,8 +30,8 @@ export default function Messages(){
   // 🔹 NEW: Mark as Read
   const markRead = async(id)=>{
     const token = localStorage.getItem("adminToken");
-    await axios.put(
-      `http://localhost:5000/api/admin/messages/read/${id}`,
+    await api.put(
+      `/admin/messages/read/${id}`,
       {},
       { headers:{ Authorization:`Bearer ${token}` } }
     );
@@ -43,8 +43,8 @@ export default function Messages(){
     const token = localStorage.getItem("adminToken");
     if(!window.confirm("Delete this message?")) return;
 
-    await axios.delete(
-      `http://localhost:5000/api/admin/messages/${id}`,
+    await api.delete(
+      `/admin/messages/${id}`,
       { headers:{ Authorization:`Bearer ${token}` } }
     );
     fetchMessages();

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "../services/api";   // 👈 adjust path if needed
 import "../assets/Admin.css";
-
 
 export default function AddPortfolio() {
   const [title, setTitle] = useState("");
@@ -23,8 +22,12 @@ export default function AddPortfolio() {
   }, []);
 
   const fetchFolders = async () => {
-    const res = await axios.get("http://localhost:5000/api/folders");
-    setFolders(res.data);
+    try {
+      const res = await api.get("/folders");
+      setFolders(res.data);
+    } catch (err) {
+      console.error("Error fetching folders:", err);
+    }
   };
 
   const handleImage = (e) => {
@@ -41,17 +44,22 @@ export default function AddPortfolio() {
     fd.append("name", newFolderName);
     fd.append("image", newFolderImage);
 
-    await axios.post("http://localhost:5000/api/admin/add-folder", fd, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
-      },
-    });
+    try {
+      await api.post("/admin/add-folder", fd, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
+        },
+      });
 
-    await fetchFolders();
+      await fetchFolders();
 
-    setNewFolderName("");
-    setNewFolderImage(null);
-    setShowFolderForm(false);
+      setNewFolderName("");
+      setNewFolderImage(null);
+      setShowFolderForm(false);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to create folder");
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -65,7 +73,7 @@ export default function AddPortfolio() {
     formData.append("image", image);
 
     try {
-      await axios.post("http://localhost:5000/api/admin/add-portfolio", formData, {
+      await api.post("/admin/add-portfolio", formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
         },
@@ -78,6 +86,7 @@ export default function AddPortfolio() {
       setImage(null);
       setPreview(null);
     } catch (err) {
+      console.error(err);
       setMsg("Upload failed");
     }
 

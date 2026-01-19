@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import "../assets/Portfolio.css";
-
+import api from "../services/api"; // 👈 adjust path if needed
 
 export default function Portfolio() {
   const [folders, setFolders] = useState([]);
@@ -15,17 +14,25 @@ export default function Portfolio() {
   }, []);
 
   const fetchFolders = async () => {
-    const res = await axios.get("http://localhost:5000/api/folders");
-    setFolders(res.data);
+    try {
+      const res = await api.get("/folders");
+      setFolders(res.data);
+    } catch (err) {
+      console.error("Error fetching folders:", err);
+    }
   };
 
   const fetchPortfolio = async () => {
-    const res = await axios.get("http://localhost:5000/api/portfolio");
-    setProjects(res.data);
+    try {
+      const res = await api.get("/portfolio");
+      setProjects(res.data);
+    } catch (err) {
+      console.error("Error fetching portfolio:", err);
+    }
   };
 
   const getFolderProjects = (folderId) =>
-    projects.filter(p => p.folderId === folderId);
+    projects.filter((p) => p.folderId === folderId);
 
   useEffect(() => {
     if (selected) document.body.classList.add("modal-open");
@@ -43,7 +50,7 @@ export default function Portfolio() {
       {/* ===== FOLDER VIEW ===== */}
       {!openFolder && (
         <div className="folder-grid">
-          {folders.map(folder => (
+          {folders.map((folder) => (
             <div
               key={folder._id}
               className="folder-card"
@@ -69,7 +76,7 @@ export default function Portfolio() {
           </button>
 
           <div className="portfolio-grid">
-            {getFolderProjects(openFolder._id).map(item => (
+            {getFolderProjects(openFolder._id).map((item) => (
               <div
                 className="portfolio-item"
                 key={item._id}
@@ -86,11 +93,16 @@ export default function Portfolio() {
         </>
       )}
 
-      {/* MODAL */}
+      {/* ===== MODAL ===== */}
       {selected && (
         <div className="portfolio-modal-bg" onClick={() => setSelected(null)}>
-          <div className="portfolio-modal" onClick={(e) => e.stopPropagation()}>
-            <span className="close-btn" onClick={() => setSelected(null)}>✖</span>
+          <div
+            className="portfolio-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span className="close-btn" onClick={() => setSelected(null)}>
+              ✖
+            </span>
 
             <img src={selected.image} alt={selected.title} />
 
@@ -101,7 +113,6 @@ export default function Portfolio() {
           </div>
         </div>
       )}
-
     </div>
   );
 }

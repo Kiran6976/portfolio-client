@@ -4,7 +4,7 @@ export default function Home() {
     <div className="home">
 
     <a
-  href="https://wa.me/919366758631"
+  href="https://wa.me/919436452223"
   target="_blank"
   rel="noopener noreferrer"
   className="whatsapp-float"

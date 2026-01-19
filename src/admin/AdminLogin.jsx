@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../services/api";   // 👈 adjust path if needed
 import "../assets/Login.css";
 
 export default function AdminLogin() {
@@ -9,8 +9,9 @@ export default function AdminLogin() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     try {
-      const res = await axios.post("http://localhost:5000/api/admin/login", {
+      const res = await api.post("/admin/login", {
         email,
         password,
       });
@@ -19,6 +20,7 @@ export default function AdminLogin() {
       window.location.href = "/admin/dashboard";
 
     } catch (err) {
+      console.error(err);
       setError(err.response?.data?.msg || "Login failed");
     }
   };

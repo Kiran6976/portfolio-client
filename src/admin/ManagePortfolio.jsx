@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../services/api";   // 👈 adjust path if needed
 import "../assets/Admin.css";
-
 
 export default function ManagePortfolio() {
   const [data, setData] = useState([]);
@@ -9,13 +8,21 @@ export default function ManagePortfolio() {
   const [openFolder, setOpenFolder] = useState(null);
 
   const fetchPortfolio = async () => {
-    const res = await axios.get("http://localhost:5000/api/portfolio");
-    setData(res.data);
+    try {
+      const res = await api.get("/portfolio");
+      setData(res.data);
+    } catch (err) {
+      console.error("Error fetching portfolio:", err);
+    }
   };
 
   const fetchFolders = async () => {
-    const res = await axios.get("http://localhost:5000/api/folders");
-    setFolders(res.data);
+    try {
+      const res = await api.get("/folders");
+      setFolders(res.data);
+    } catch (err) {
+      console.error("Error fetching folders:", err);
+    }
   };
 
   useEffect(() => {
@@ -29,27 +36,35 @@ export default function ManagePortfolio() {
   const deleteItem = async (id) => {
     if (!window.confirm("Delete this project?")) return;
 
-    await axios.delete(`http://localhost:5000/api/admin/portfolio/${id}`, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
-      },
-    });
+    try {
+      await api.delete(`/admin/portfolio/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
+        },
+      });
 
-    fetchPortfolio();
+      fetchPortfolio();
+    } catch (err) {
+      console.error("Delete project failed:", err);
+    }
   };
 
   const deleteFolder = async (id) => {
     if (!window.confirm("Delete this folder and all projects?")) return;
 
-    await axios.delete(`http://localhost:5000/api/admin/folder/${id}`, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
-      },
-    });
+    try {
+      await api.delete(`/admin/folder/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
+        },
+      });
 
-    fetchFolders();
-    fetchPortfolio();
-    setOpenFolder(null);
+      fetchFolders();
+      fetchPortfolio();
+      setOpenFolder(null);
+    } catch (err) {
+      console.error("Delete folder failed:", err);
+    }
   };
 
   return (
