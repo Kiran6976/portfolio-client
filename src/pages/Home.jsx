@@ -31,12 +31,17 @@ export default function Home() {
             <span>Parthiv Chakraborty</span>
           </h1>
 
-          <p className="hero-desc">
-            A passionate graphic designer crafting visual experiences that
-            blend creativity with strategic thinking. Specializing in brand
-            identity, digital design, and motion graphics that leave lasting
-            impressions.
-          </p>
+       <p className="hero-desc">
+  I’m Parthiv Chakraborty, a freelance graphic designer with 4+ years of solid experience in creative visual design. I don’t just make designs — I build vibes that convert. From clean minimal looks to bold, scroll-stopping visuals, I know how to turn ideas into eye-catching graphics.
+</p>
+
+<p className="hero-desc">
+  Working with me? Expect smooth communication, fast creativity, zero boring stuff, and designs that actually hit different.
+</p>
+
+<p className="hero-desc">
+  If you want visuals that speak loud, look premium, and stand out in the crowd — trust me, you’re gonna love working with me.
+</p>
 
           <div className="signature-row">
             <span className="signature">Parthiv Chakraborty</span>

@@ -10,11 +10,12 @@ export default function Navbar() {
 
         {/* Left Logo */}
         <div className="nav-logo">
-          <div className="logo-circle">P</div>
-          <div className="logo-text">
-            <span>Parthiv</span>
-            <small>DESIGNER</small>
-          </div>
+       
+
+         <div className="logo-title-img">
+  <img src="/Title.png" alt="Parthiv Designer" />
+</div>
+
         </div>
 
         {/* Center Menu (DESKTOP) */}
@@ -28,7 +29,7 @@ export default function Navbar() {
                 `nav-item ${isActive ? "active" : ""}`
               }
             >
-              <span className="icon">🏠</span> Home
+              <span className="icon"></span> Home
             </NavLink>
           </li>
 
@@ -39,7 +40,7 @@ export default function Navbar() {
                 `nav-item ${isActive ? "active" : ""}`
               }
             >
-              <span className="icon">👤</span> About
+              <span className="icon"></span> About
             </NavLink>
           </li>
 
@@ -50,7 +51,7 @@ export default function Navbar() {
                 `nav-item ${isActive ? "active" : ""}`
               }
             >
-              <span className="icon">💖</span> Services
+              <span className="icon"></span> Services
             </NavLink>
           </li>
 
@@ -61,7 +62,7 @@ export default function Navbar() {
                 `nav-item ${isActive ? "active" : ""}`
               }
             >
-              <span className="icon">⭐</span> Skills
+              <span className="icon"></span> Skills
             </NavLink>
           </li>
 
@@ -72,7 +73,7 @@ export default function Navbar() {
                 `nav-item ${isActive ? "active" : ""}`
               }
             >
-              <span className="icon">🗂</span> Portfolio
+              <span className="icon"></span> Portfolio
             </NavLink>
           </li>
 
@@ -83,7 +84,7 @@ export default function Navbar() {
                 `nav-item ${isActive ? "active" : ""}`
               }
             >
-              <span className="icon">✉</span> Contact
+              <span className="icon"></span> Contact
             </NavLink>
           </li>
 
