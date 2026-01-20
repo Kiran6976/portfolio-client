@@ -259,6 +259,47 @@
   }
 }
 
+@media (max-width: 768px) {
+
+  .premium-modal {
+    max-height: 95vh;
+  }
+
+  .modal-image-wrap {
+    max-height: 65vh;
+    overflow: hidden;
+  }
+
+  .modal-image-wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .modal-content {
+    padding: 18px 16px;
+  }
+
+  .modal-content h3 {
+    font-size: 18px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+  }
+
+  .close-btn {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
+
+
+
+
 /* ======================
    RESPONSIVE
 ====================== */
@@ -291,10 +332,7 @@
     height: 220px;
   }
 
-  .portfolio-modal img {
-    height: 200px;
-  }
-
+  
   .modal-content {
     padding: 18px;
   }

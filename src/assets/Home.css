@@ -160,12 +160,20 @@
   .hero {
     flex-direction: column;
     text-align: center;
-    gap: 25px;
+    gap: 28px;
+  }
+
+  .hero-image {
+    width: 200%;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-image img {
-    width: 85%;
+    width: 100%;
+    max-width: 380px; /* controls size */
     margin: auto;
+    border-radius: 20px;
   }
 
   .hero-content {
@@ -178,20 +186,21 @@
   }
 
   .hero-desc {
-    font-size: 14px;
+    font-size: 14.5px;
     line-height: 1.6;
   }
 
   .signature-row {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 14px;
   }
 
   .social-icons {
     justify-content: center;
   }
 }
+
 
 .whatsapp-float {
   position: fixed;
