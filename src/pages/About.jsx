@@ -16,8 +16,8 @@ export default function About() {
         <div className="about-image">
           <img src="/About.png" alt="About" />
           <div className="experience-badge">
-            <h3>12+</h3>
-            <p>YEARS</p>
+            <h3>4+</h3>
+            <p>EXP</p>
           </div>
         </div>
 
