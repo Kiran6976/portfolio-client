@@ -95,24 +95,24 @@ export default function Portfolio() {
 
       {/* ===== MODAL ===== */}
       {selected && (
-        <div className="portfolio-modal-bg" onClick={() => setSelected(null)}>
-          <div
-            className="portfolio-modal"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <span className="close-btn" onClick={() => setSelected(null)}>
-              ✖
-            </span>
+  <div className="portfolio-modal-bg" onClick={() => setSelected(null)}>
+    <div
+      className="portfolio-modal premium-modal"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button className="close-btn" onClick={() => setSelected(null)}>✕</button>
 
-            <img src={selected.image} alt={selected.title} />
+      <div className="modal-image-wrap">
+        <img src={selected.image} alt={selected.title} />
+      </div>
 
-            <div className="modal-content">
-              <h3>{selected.title}</h3>
-              <p>{selected.description}</p>
-            </div>
-          </div>
-        </div>
-      )}
+      <div className="modal-content">
+        <h3>{selected.title}</h3>
+        <p>{selected.description}</p>
+      </div>
+    </div>
+  </div>
+)}
     </div>
   );
 }

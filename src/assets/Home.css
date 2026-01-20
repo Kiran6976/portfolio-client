@@ -69,20 +69,60 @@
 
 
 .cv-btn {
-  background: transparent;
-  border: 2px solid #00ff88;
+  position: relative;
+  padding: 12px 32px;
+  border-radius: 40px;
+  background: rgba(0,255,136,0.08);
+  border: 1.5px solid #00ff88;
   color: #00ff88;
-  padding: 8px 18px;
-  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.8px;
   cursor: pointer;
-  transition: 0.3s;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  transition: 0.35s ease;
+
+  animation: cvGlowPulse 3.5s ease-in-out infinite;
 }
 
+/* Inner glowing wave */
+.cv-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center,
+      rgba(0,255,136,0.35),
+      rgba(0,255,136,0.05),
+      transparent 65%);
+  opacity: 0;
+  animation: glowWave 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Hover */
 .cv-btn:hover {
   background: #00ff88;
   color: #000;
-  box-shadow: 0 0 12px #00ff88;
+  box-shadow: 0 0 20px rgba(0,255,136,0.8);
+  transform: translateY(-2px) scale(1.03);
 }
+
+/* Animations */
+
+@keyframes cvGlowPulse {
+  0% { box-shadow: 0 0 6px rgba(0,255,136,0.25); }
+  50% { box-shadow: 0 0 22px rgba(0,255,136,0.85); }
+  100% { box-shadow: 0 0 6px rgba(0,255,136,0.25); }
+}
+
+@keyframes glowWave {
+  0% { opacity: 0; }
+  40% { opacity: 1; }
+  60% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 
 /* SOCIAL ICONS */
 
