@@ -149,3 +149,40 @@
     font-size: 22px;
   }
 }
+
+.trusted-footer {
+  margin-top: 120px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.trusted-footer-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #00ff88;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(0,255,136,0.6);
+}
+
+.trusted-footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.trusted-footer-logos img {
+  height: 80px;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+.trusted-footer-logos img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}

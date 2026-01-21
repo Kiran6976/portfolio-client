@@ -125,32 +125,43 @@
 
 
 /* SOCIAL ICONS */
-
-.social-icons {
-  display: flex;
-  gap: 16px;
-  margin-top: 18px;
-}
-
 .social-icons a {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  border: 1px solid #00ff88;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: linear-gradient(145deg, #0f0f0f, #050505);
+  border: 1px solid rgba(0,255,136,0.5);
+
   color: #00ff88;
   font-size: 18px;
-  transition: 0.3s ease;
-  background: rgba(0, 255, 136, 0.05);
+
+  box-shadow:
+    inset 0 0 6px rgba(0,255,136,0.25),
+    0 0 12px rgba(0,255,136,0.25);
+
+  transition: 0.35s ease;
+  backdrop-filter: blur(6px);
 }
 
+/* Hover = realistic app icon */
 .social-icons a:hover {
-  background: #00ff88;
-  color: #000;
   transform: translateY(-4px) scale(1.08);
-  box-shadow: 0 0 15px #00ff88;
+
+  background: linear-gradient(145deg, #00ff88, #00cc6a);
+  color: #000;
+
+  box-shadow:
+    0 0 25px rgba(0,255,136,0.9),
+    inset 0 0 6px rgba(255,255,255,0.4);
+}
+
+/* Icon subtle depth */
+.social-icons i {
+  filter: drop-shadow(0 0 6px rgba(0,255,136,0.6));
 }
 
 /* RESPONSIVE */
@@ -205,17 +216,6 @@
   text-align: center;
 }
 
-.trusted-title {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: #00ff88;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  text-shadow: 
-    0 0 10px rgba(0,255,136,0.6),
-    0 0 20px rgba(0,255,136,0.4);
-}
 
 .trusted-slider {
   overflow: hidden;

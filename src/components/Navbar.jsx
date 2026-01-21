@@ -70,11 +70,11 @@ useEffect(() => {
         {/* Center Menu (DESKTOP) */}
         <ul className="nav-menu">
 {[
-  { id: "home",  icon: <Home size={25} /> },
-  { id: "about",  icon: <User size={25} /> },
-  { id: "services",  icon: <Briefcase size={25} /> },
-  { id: "portfolio",  icon: <Image size={25} /> },
-  { id: "contact",  icon: <Mail size={25} /> },
+  { id: "home", label: "Home", icon: <Home size={15} /> },
+  { id: "about", label: "About", icon: <User size={15} /> },
+  { id: "services", label: "Services", icon: <Briefcase size={15} /> },
+  { id: "portfolio", label: "Portfolio", icon: <Image size={15} /> },
+  { id: "contact", label: "Contact", icon: <Mail size={15} /> },
 ].map(item => (
   <li
     key={item.id}

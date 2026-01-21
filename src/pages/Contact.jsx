@@ -62,14 +62,45 @@ export default function Contact() {
         Get <span>Inspired!</span>
       </h3>
 
+      <div className="trusted-footer">
+  <p className="trusted-footer-title">Trusted By</p>
+
+  <div className="trusted-footer-logos">
+<img src="/logos/logo2.jpg" />
+<img src="/logos/logo4.png" />
+ <img src="/logos/logo5.jpg" />
+ <img src="/logos/logo7.png" />
+  <img src="/logos/logo8.png" />
+  <img src="/logos/logo9.png" />
+  <img src="/logos/logo11.png" />
+  <img src="/logos/logo12.png" />
+      <img src="/logos/logo1.png" />
+      
+      <img src="/logos/logo3.png" />
+      
+     
+      <img src="/logos/logo6.jpg" />
+      
+      
+     
+      <img src="/logos/logo10.png" />
+      
+      
+      <img src="/logos/logo13.jpg" />
+  </div>
+</div>
+
+
       <div className="social-icons">
-        <a href="#"><i className="fab fa-facebook-f"></i></a>
-        <a href="#"><i className="fab fa-x-twitter"></i></a>
-        <a href="#"><i className="fab fa-instagram"></i></a>
-        <a href="#"><i className="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/1CCPMfSMcd/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/ParthivCha85024" target="_blank" rel="noopener noreferrer"><i className="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/parthiv__chakraborty?igsh=MW1kdXZpNWNvem5neg==&utm_source=ig_contact_invite" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/parthiv-chakraborty-786402247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
         <a href="#"><i className="fas fa-globe"></i></a>
       </div>
 
     </div>
+
+    
   );
 }

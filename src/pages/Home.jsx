@@ -54,17 +54,17 @@ export default function Home() {
             </div>
 
             <div className="social-icons">
-              <a href="#"><i className="fab fa-facebook-f"></i></a>
-              <a href="#"><i className="fab fa-x-twitter"></i></a>
-              <a href="#"><i className="fas fa-camera"></i></a>
-              <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/share/1CCPMfSMcd/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/ParthivCha85024" target="_blank" rel="noopener noreferrer"><i className="fab fa-x-twitter"></i></a>
+              <a href="https://www.instagram.com/parthiv__chakraborty?igsh=MW1kdXZpNWNvem5neg==&utm_source=ig_contact_invite" target="_blank" rel="noopener noreferrer"><i className="fas fa-camera"></i></a>
+              <a href="https://www.linkedin.com/in/parthiv-chakraborty-786402247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
             </div>
           </div>
           
         </div>
       </div>
 <div className="trusted-section">
-  <p className="trusted-title">Trusted by</p>
+  
 
   <div className="trusted-slider">
     <div className="trusted-track">
