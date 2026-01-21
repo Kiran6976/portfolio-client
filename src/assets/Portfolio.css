@@ -179,6 +179,7 @@
   max-height: 90vh;
   border-radius: 18px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;  
   box-shadow: 0 0 40px rgba(0,255,136,0.25);
   animation: modalPop 0.4s ease;
   position: relative;

@@ -84,6 +84,7 @@ export default function ManagePortfolio() {
       await api.put(`/admin/folder/${editFolder._id}`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
+          "Content-Type": "multipart/form-data"
         },
       });
 
