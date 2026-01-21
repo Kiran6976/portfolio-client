@@ -147,6 +147,10 @@
   backdrop-filter: blur(6px);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Hover = realistic app icon */
 .social-icons a:hover {
   transform: translateY(-4px) scale(1.08);
@@ -342,3 +346,4 @@
     height: 45px;
   }
 }
+
