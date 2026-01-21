@@ -49,12 +49,12 @@ export default function About() {
 
             <div className="about-card">
               <h4>Award Winner</h4>
-              <p>25+ Design Awards</p>
+              <p>15+ Design Awards</p>
             </div>
 
             <div className="about-card">
               <h4>Client Focused</h4>
-              <p>85+ Happy Clients</p>
+              <p>60+ Happy Clients</p>
             </div>
 
             <div className="about-card">
@@ -77,22 +77,22 @@ export default function About() {
       <div className="about-stats">
 
         <div className="stat-box">
-          <h3><CountUp end={150} />+</h3>
+          <h3><CountUp end={200} />+</h3>
           <p>Projects Completed</p>
         </div>
 
         <div className="stat-box">
-          <h3><CountUp end={85} />+</h3>
+          <h3><CountUp end={60} />+</h3>
           <p>Happy Clients</p>
         </div>
 
         <div className="stat-box">
-          <h3><CountUp end={12} /></h3>
+          <h3><CountUp end={4} /></h3>
           <p>Years Experience</p>
         </div>
 
         <div className="stat-box">
-          <h3><CountUp end={25} />+</h3>
+          <h3><CountUp end={15} />+</h3>
           <p>Awards Won</p>
         </div>
 
