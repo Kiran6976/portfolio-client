@@ -338,3 +338,17 @@
 #about {
   min-height: 100vh;
 }
+
+.nav-item svg {
+  stroke: #00ff88;
+  stroke-width: 1.8;
+  transition: 0.3s ease;
+}
+
+.nav-item:hover svg {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.nav-item.active svg {
+  filter: drop-shadow(0 0 6px #00ff88);
+}

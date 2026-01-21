@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import "../assets/Navbar.css";
+import { Home, User, Briefcase, Image, Mail } from "lucide-react";
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -67,17 +69,23 @@ useEffect(() => {
 
         {/* Center Menu (DESKTOP) */}
         <ul className="nav-menu">
+{[
+  { id: "home",  icon: <Home size={25} /> },
+  { id: "about",  icon: <User size={25} /> },
+  { id: "services",  icon: <Briefcase size={25} /> },
+  { id: "portfolio",  icon: <Image size={25} /> },
+  { id: "contact",  icon: <Mail size={25} /> },
+].map(item => (
+  <li
+    key={item.id}
+    className={`nav-item ${active === item.id ? "active" : ""}`}
+    onClick={() => scrollToSection(item.id)}
+  >
+    {item.icon}
+    {item.label}
+  </li>
+))}
 
-          {["home","about","services","portfolio","contact"].map(item => (
-            <li
-              key={item}
-              className={`nav-item ${active === item ? "active" : ""}`}
-              onClick={() => scrollToSection(item)}
-            >
-              <span className="icon"></span>
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-            </li>
-          ))}
 
         </ul>
 
