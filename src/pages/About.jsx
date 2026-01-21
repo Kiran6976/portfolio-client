@@ -27,47 +27,61 @@ export default function About() {
           <h3>
             Creative Designer &<br /><span>Visual Storyteller</span>
           </h3>
+<p className="about-para">
+  Hi, I’m <span>Parthiv Chakraborty</span>, a creative graphic designer with 
+  <span> 4+ years of experience</span> in transforming ideas into powerful visual stories. 
+  I don’t just make graphics — I <span>visualize concepts and shape them into unique, engaging creatives</span> 
+   that leave a lasting impression.
+</p>
 
-          <p>
-            I'm Parthiv Chakraborty, a passionate graphic designer with over 12 years
-            of experience crafting compelling visual narratives.
-          </p>
+<p className="about-para">
+  My expertise includes <span>brand identity, logo design, UI/UX, event branding, and digital creatives</span>. 
+  Every project I work on is driven by originality, strategy, and attention to detail, ensuring that each design 
+  not only looks good but also communicates the right message and strengthens the brand.
+</p>
 
-          <p>
-            I specialize in transforming complex ideas into stunning visual solutions
-            that resonate with audiences. From brand identity to digital experiences,
-            I bring a unique blend of creativity, strategic thinking, and technical expertise.
-          </p>
+<p className="about-para">
+  Alongside design, I’m a <span>CSE engineering student</span>, which gives me a technical edge in today’s digital world. 
+  With knowledge of <span>coding and technology</span>, I create designs that are functional, user-focused, and future-ready. 
+  If you’re looking for a designer who blends <span>creativity with smart thinking</span>, you’ll enjoy working with me.
+</p>
 
-          <p>
-            My approach is rooted in understanding the core essence of each brand and
-            translating it into designs that not only look beautiful but also drive results.
-            I believe great design is invisible — it simply works.
-          </p>
 
-          <div className="about-cards">
+         <div className="about-cards">
 
-            <div className="about-card">
-              <h4>Award Winner</h4>
-              <p>15+ Design Awards</p>
-            </div>
+  <div className="about-card">
+    <div className="about-main">
+      <h4>Award Winner</h4>
+      <p>15+ Design Awards</p>
+    </div>
+    <div className="about-footer">Excellence</div>
+  </div>
 
-            <div className="about-card">
-              <h4>Client Focused</h4>
-              <p>60+ Happy Clients</p>
-            </div>
+  <div className="about-card">
+    <div className="about-main">
+      <h4>Client Focused</h4>
+      <p>60+ Happy Clients</p>
+    </div>
+    <div className="about-footer">Trust</div>
+  </div>
 
-            <div className="about-card">
-              <h4>Innovation</h4>
-              <p>Creative Solutions</p>
-            </div>
+  <div className="about-card">
+    <div className="about-main">
+      <h4>Innovation</h4>
+      <p>Creative Solutions</p>
+    </div>
+    <div className="about-footer">Ideas</div>
+  </div>
 
-            <div className="about-card">
-              <h4>On Time</h4>
-              <p>Always Deliver</p>
-            </div>
+  <div className="about-card">
+    <div className="about-main">
+      <h4>On Time</h4>
+      <p>Always Deliver</p>
+    </div>
+    <div className="about-footer">Commitment</div>
+  </div>
 
-          </div>
+</div>
 
         </div>
 
