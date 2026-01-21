@@ -50,7 +50,15 @@ export default function Home() {
 
             <div className="signature-row">
               <span className="signature">Parthiv Chakraborty</span>
-              <button className="cv-btn">View CV</button>
+              <a
+  href="/CV.png"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="cv-btn"
+>
+  View CV
+</a>
+
             </div>
 
             <div className="social-icons">
