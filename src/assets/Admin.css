@@ -923,3 +923,195 @@
 .admin-folder-edit:active {
   transform: scale(0.95);
 }
+
+/* ======================
+   ADMIN RESPONSIVE
+====================== */
+
+@media (max-width: 900px) {
+
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .admin-logo {
+    margin-bottom: 15px;
+  }
+
+  .admin-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .admin-menu li {
+    padding: 10px 14px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .admin-main {
+    width: 100%;
+  }
+
+  .admin-header {
+    padding: 14px 20px;
+    text-align: center;
+  }
+
+  .admin-content {
+    padding: 18px;
+  }
+
+}
+
+/* ======================
+   FORMS MOBILE
+====================== */
+
+@media (max-width: 600px) {
+
+  .admin-form-box {
+    padding: 22px;
+    width: 100%;
+  }
+
+  .admin-form input,
+  .admin-form textarea,
+  .admin-form select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .admin-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .file-box {
+    font-size: 14px;
+  }
+
+}
+
+/* ======================
+   FOLDER GRID MOBILE
+====================== */
+
+@media (max-width: 600px) {
+
+  .admin-folder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-folder-card img {
+    height: 180px;
+  }
+
+  .admin-folder-card h4 {
+    font-size: 16px;
+  }
+
+  .admin-folder-delete {
+    font-size: 13px;
+  }
+
+  .admin-folder-edit {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+}
+
+/* ======================
+   PORTFOLIO GRID MOBILE
+====================== */
+
+@media (max-width: 600px) {
+
+  .admin-portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-portfolio-img img {
+    height: 200px;
+  }
+
+}
+
+/* ======================
+   EDIT MODAL MOBILE
+====================== */
+
+@media (max-width: 600px) {
+
+  .edit-modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .edit-modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-cancel,
+  .btn-update {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+/* ======================
+   MESSAGES MOBILE
+====================== */
+
+@media (max-width: 600px) {
+
+  .messages-page {
+    padding: 15px;
+  }
+
+  .message-card {
+    padding: 15px;
+  }
+
+  .msg-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .msg-text {
+    font-size: 13px;
+  }
+
+}
+
+/* ======================
+   DELETE BUTTON MOBILE
+====================== */
+
+@media (max-width: 600px) {
+
+  .button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .svgIcon {
+    width: 10px;
+  }
+
+}
+ 
