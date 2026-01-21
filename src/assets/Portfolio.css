@@ -82,9 +82,9 @@
 ====================== */
 
 .back-btn {
-  position: sticky;
-  top: 130px;   /* MUST be >= navbar height */
-  z-index: 999;
+  position: relative;
+    /* MUST be >= navbar height */
+  z-index: 1;
 
   background: rgba(0,0,0,0.75);
   border: 1px solid #00ff88;
@@ -351,4 +351,19 @@
   .portfolio-overlay h4 {
     font-size: 15px;
   }
+}
+
+/* Default: no scrollbar */
+.portfolio-page {
+  overflow: hidden;
+}
+
+/* Only when folder is open */
+.portfolio-page.folder-open {
+  position: fixed;
+  inset: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  background: #000;
+  z-index: 999;
 }

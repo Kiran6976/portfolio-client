@@ -34,13 +34,17 @@ export default function Portfolio() {
   const getFolderProjects = (folderId) =>
     projects.filter((p) => p.folderId === folderId);
 
-  useEffect(() => {
-    if (selected) document.body.classList.add("modal-open");
-    else document.body.classList.remove("modal-open");
-  }, [selected]);
+useEffect(() => {
+  if (openFolder) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+}, [openFolder]);
 
   return (
-    <div className="portfolio-page">
+    <div className={`portfolio-page ${openFolder ? "folder-open" : ""}`}>
+
 
       <p className="section-tag center">RECENT WORK</p>
       <h2 className="section-title center">

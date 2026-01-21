@@ -1,8 +1,58 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../assets/Navbar.css";
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("home");
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      setActive(id);
+    }
+    setOpen(false);
+  };
+useEffect(() => {
+  const sectionIds = ["home", "about", "services", "portfolio", "contact"];
+
+  const getSectionOffsets = () =>
+    sectionIds.map(id => {
+      const el = document.getElementById(id);
+      return {
+        id,
+        top: el ? el.offsetTop : 0
+      };
+    });
+
+  let sections = getSectionOffsets();
+
+  const handleScroll = () => {
+    const scrollPos = window.scrollY + 140; // navbar offset
+
+    let current = "home";
+
+    for (let i = 0; i < sections.length; i++) {
+      if (scrollPos >= sections[i].top) {
+        current = sections[i].id;
+      }
+    }
+
+    setActive(current);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", () => {
+    sections = getSectionOffsets();
+  });
+
+  handleScroll();
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
 
   return (
     <nav className="navbar-wrapper">
@@ -10,88 +60,34 @@ export default function Navbar() {
 
         {/* Left Logo */}
         <div className="nav-logo">
-       
-
-         <div className="logo-title-img">
-  <img src="/Title.png" alt="Parthiv Designer" />
-</div>
-
+          <div className="logo-title-img">
+            <img src="/Title.png" alt="Parthiv Designer" />
+          </div>
         </div>
 
         {/* Center Menu (DESKTOP) */}
         <ul className="nav-menu">
 
-          <li>
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active" : ""}`
-              }
+          {["home","about","services","portfolio","contact"].map(item => (
+            <li
+              key={item}
+              className={`nav-item ${active === item ? "active" : ""}`}
+              onClick={() => scrollToSection(item)}
             >
-              <span className="icon"></span> Home
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active" : ""}`
-              }
-            >
-              <span className="icon"></span> About
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active" : ""}`
-              }
-            >
-              <span className="icon"></span> Services
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/skills"
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active" : ""}`
-              }
-            >
-              <span className="icon"></span> Skills
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/portfolio"
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active" : ""}`
-              }
-            >
-              <span className="icon"></span> Portfolio
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `nav-item ${isActive ? "active" : ""}`
-              }
-            >
-              <span className="icon"></span> Contact
-            </NavLink>
-          </li>
+              <span className="icon"></span>
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </li>
+          ))}
 
         </ul>
 
         {/* Right Button */}
-        <button className="talk-btn nav-cta">Let’s Talk →</button>
+        <button
+          className="talk-btn nav-cta"
+          onClick={() => scrollToSection("contact")}
+        >
+          Let’s Talk →
+        </button>
 
         {/* MOBILE ICON */}
         <div className="mobile-menu-icon" onClick={() => setOpen(!open)}>
@@ -103,16 +99,18 @@ export default function Navbar() {
       {/* MOBILE DROPDOWN */}
       {open && (
         <div className="mobile-menu">
-          <NavLink to="/" onClick={()=>setOpen(false)}>Home</NavLink>
-          <NavLink to="/about" onClick={()=>setOpen(false)}>About</NavLink>
-          <NavLink to="/services" onClick={()=>setOpen(false)}>Services</NavLink>
-          <NavLink to="/skills" onClick={()=>setOpen(false)}>Skills</NavLink>
-          <NavLink to="/portfolio" onClick={()=>setOpen(false)}>Portfolio</NavLink>
-          <NavLink to="/contact" onClick={()=>setOpen(false)}>Contact</NavLink>
+          {["home","about","services","portfolio","contact"].map(item => (
+            <span
+              key={item}
+              className={active === item ? "active" : ""}
+              onClick={() => scrollToSection(item)}
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </span>
+          ))}
         </div>
       )}
 
-      {/* Glow line */}
       <div className="nav-glow-line"></div>
     </nav>
   );

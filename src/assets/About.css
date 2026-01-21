@@ -1,6 +1,10 @@
 /* ======================
    ABOUT PAGE
 ====================== */
+#about {
+  min-height: 100vh;
+  scroll-margin-top: 110px;
+}
 
 .about-page {
   padding: 120px 80px;
