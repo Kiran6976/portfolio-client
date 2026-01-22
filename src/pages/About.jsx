@@ -27,24 +27,31 @@ export default function About() {
           <h3>
             Creative Designer &<br /><span>Visual Storyteller</span>
           </h3>
-<p className="about-para">
-  Hi, I’m <span>Parthiv Chakraborty</span>, a creative graphic designer with 
-  <span> 4+ years of experience</span> in transforming ideas into powerful visual stories. 
-  I don’t just make graphics — I <span>visualize concepts and shape them into unique, engaging creatives</span> 
-   that leave a lasting impression.
-</p>
+              <p className="about-para">
+                I am a passionate graphic designer with over 
+                <span> 4 years of experience </span>
+                in creating visually impactful and meaningful designs. My skill set covers branding, 
+                logo design, UI/UX, event creatives, and digital media, where I focus not just on design 
+                but on delivering a clear visual message. I believe good design is a balance of 
+                creativity, clarity, and purpose.
+              </p>
 
-<p className="about-para">
-  My expertise includes <span>brand identity, logo design, UI/UX, event branding, and digital creatives</span>. 
-  Every project I work on is driven by originality, strategy, and attention to detail, ensuring that each design 
-  not only looks good but also communicates the right message and strengthens the brand.
-</p>
+              <p className="about-para">
+                Creative visualization is my strongest skill — I don’t just design, I 
+                <span> visualize stories and turn ideas into visuals</span>. Every project starts 
+                with understanding the concept deeply and then transforming it into a unique and 
+                engaging creative. This approach helps me produce designs that stand out, connect 
+                with audiences, and leave a lasting impression.
+              </p>
 
-<p className="about-para">
-  Alongside design, I’m a <span>CSE engineering student</span>, which gives me a technical edge in today’s digital world. 
-  With knowledge of <span>coding and technology</span>, I create designs that are functional, user-focused, and future-ready. 
-  If you’re looking for a designer who blends <span>creativity with smart thinking</span>, you’ll enjoy working with me.
-</p>
+              <p className="about-para">
+                In addition to digital design, I also 
+                <span> know how to draw</span>, which strengthens my creative foundation. My drawing 
+                skills help me sketch ideas, develop original concepts, and bring a more artistic 
+                and authentic touch to my work. With experience, creativity, and strong visualization, 
+                I constantly aim to evolve and deliver high-quality design solutions.
+              </p>
+
 
 
          <div className="about-cards">

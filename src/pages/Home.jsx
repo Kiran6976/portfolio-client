@@ -37,16 +37,23 @@ export default function Home() {
             </h1>
 
             <p className="hero-desc">
-              I’m Parthiv Chakraborty, a freelance graphic designer with 4+ years of solid experience in creative visual design. I don’t just make designs — I build vibes that convert. From clean minimal looks to bold, scroll-stopping visuals, I know how to turn ideas into eye-catching graphics.
-            </p>
+                My name is <span>Parthiv Chakraborty</span>, and I am currently pursuing a 
+                <span> Bachelor’s degree in Computer Science and Engineering (CSE)</span>. 
+                Alongside my academic journey, I am a 
+                <span> freelance graphic designer with over 4 years of hands-on experience</span> 
+                in creative visual design.
+              </p>
 
-            <p className="hero-desc">
-              Working with me? Expect smooth communication, fast creativity, zero boring stuff, and designs that actually hit different.
-            </p>
+              <p className="hero-desc">
+                I specialize in branding, logo design, UI/UX, event branding, and digital creatives, 
+                with a strong focus on visual storytelling and unique concepts.
+              </p>
 
-            <p className="hero-desc">
-              If you want visuals that speak loud, look premium, and stand out in the crowd — trust me, you’re gonna love working with me.
-            </p>
+              <p className="hero-desc">
+                My background in CSE also gives me a basic understanding of coding and technology, 
+                which helps me bridge creativity with technical thinking and deliver modern, 
+                impactful design solutions.
+              </p>
 
             <div className="signature-row">
               <span className="signature">Parthiv Chakraborty</span>

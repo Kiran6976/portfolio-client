@@ -347,3 +347,9 @@ a {
   }
 }
 
+
+.hero-desc span {
+  color: #00ff88;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0,255,136,0.35);
+}
