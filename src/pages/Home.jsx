@@ -86,7 +86,7 @@ export default function Home() {
       <img src="/logos/logo1.png" />
       <img src="/logos/logo2.jpg" />
       <img src="/logos/logo3.png" />
-      <img src="/logos/logo4.png" />
+      <img src="/logos/logo4.png" className="logo-big" />
       <img src="/logos/logo5.jpg" />
       <img src="/logos/logo6.jpg" />
       <img src="/logos/logo7.png" />
@@ -101,7 +101,7 @@ export default function Home() {
       <img src="/logos/logo1.png" />
       <img src="/logos/logo2.jpg" />
       <img src="/logos/logo3.png" />
-      <img src="/logos/logo4.png" />
+      <img src="/logos/logo4.png" className="logo-big" />
       <img src="/logos/logo5.jpg" />
       <img src="/logos/logo6.jpg" />
       <img src="/logos/logo7.png" />

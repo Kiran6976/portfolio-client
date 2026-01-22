@@ -353,3 +353,20 @@ a {
   font-weight: 600;
   text-shadow: 0 0 6px rgba(0,255,136,0.35);
 }
+
+.trusted-track {
+  display: flex;
+  align-items: center;   /* 🔥 THIS fixes vertical jump */
+  gap: 50px;
+}
+
+.trusted-track img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.trusted-track img.logo-big {
+  height: 140px;
+}
