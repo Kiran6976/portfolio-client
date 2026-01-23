@@ -40,7 +40,7 @@ export default function Home() {
                 My name is <span>Parthiv Chakraborty</span>, and I am currently pursuing a 
                 <span> Bachelor’s degree in Computer Science and Engineering (CSE)</span>. 
                 Alongside my academic journey, I am a 
-                <span> freelance graphic designer with over 4 years of hands-on experience</span> 
+                <span> freelance graphic designer with over 4 years of hands-on experience</span>{" "} 
                 in creative visual design.
               </p>
 
